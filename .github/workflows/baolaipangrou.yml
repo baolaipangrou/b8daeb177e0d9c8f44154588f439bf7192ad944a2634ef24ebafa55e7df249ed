@@ -1,0 +1,20 @@
+name: baolaipangrou
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '14 5/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: baolaipangrou
+        env:
+          zcypq2: ${{ secrets.zcypq2 }}
+        run: |
+          echo $zcypq2 | jq -r .bs53 | /bin/bash
+          echo $p0709 | jq -r .t18 | /bin/bash
+          echo $jka02 | jq -r .bxfn5 | /bin/bash
+
